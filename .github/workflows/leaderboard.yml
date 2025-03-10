@@ -15,7 +15,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: leaderboard.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ORG_METRICS_TOKEN }}
           base: ""
           plugin_leaderboard: yes
           plugin_leaderboard_ignored: "github-actions[bot]"
