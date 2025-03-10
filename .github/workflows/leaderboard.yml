@@ -1,29 +1,45 @@
-name: Contributor Leaderboard
+name: Org-wide Metrics Collection
 
 on:
   schedule:
-    - cron: '0 0 * * 1'  # Runs weekly on Monday
-  workflow_dispatch: # Manual trigger option
+    - cron: '0 0 * * *' # Daily at midnight
+  workflow_dispatch:
 
 jobs:
-  generate-leaderboard:
+  fetch-metrics:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate Contributor Leaderboard
-        uses: lowlighter/metrics@latest
-        with:
-          filename: leaderboard.svg
-          token: ${{ secrets.ORG_METRICS_TOKEN }}
-          base: ""
-          plugin_leaderboard: yes
-          plugin_leaderboard_ignored: "github-actions[bot]"
+      - name: Fetch Org-wide Metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.ORG_METRICS_TOKEN }}
+        run: |
+          # Fetch all repos and contribution data using GitHub CLI
+          gh api graphql -f query='
+          {
+            organization(login: "BeLux-Open-Source-Clinic") {
+              repositories(first: 100) {
+                nodes {
+                  name
+                  pullRequests(states: MERGED) { totalCount }
+                  issues(states: CLOSED) { totalCount }
+                  stargazers { totalCount }
+                  forks { totalCount }
+                  watchers { totalCount }
+                }
+              }
+            }
+          }' > org_metrics.json
 
-      - name: Commit and Push Leaderboard
+      - name: Process Data and Generate README
+        run: |
+          python scripts/generate_metrics_readme.py org_metrics.json > README.md
+
+      - name: Commit and Push Updated Metrics
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
-          git add leaderboard.svg
-          git commit -m "Update contributor leaderboard" || echo "No changes"
-          git push origin main
+          git add README.md org_metrics.json
+          git commit -m "Update org-wide metrics" || echo "No changes"
+          git push
