@@ -12,5 +12,5 @@
 
 | 🏆 Leaderboard | 🚀 Organization Metrics | 🌍 Contributors |
 |---------------|----------------------|----------------|
-| ![Leaderboard](org-leaderboard.svg) | ![Stars](https://img.shields.io/github/stars/<YOUR_ORG>/<REPO>) | ![Total Contributors](https://img.shields.io/github/contributors/<YOUR_ORG>/<REPO>) |
-| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/<YOUR_ORG>/<REPO>) | ![Forks](https://img.shields.io/github/forks/<YOUR_ORG>/<REPO>) | ![Closed Issues](https://img.shields.io/github/issues-closed/<YOUR_ORG>/<REPO>) |
+| ![Leaderboard](org-leaderboard.svg) | ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/<REPO>) | ![Total Contributors](https://img.shields.io/github/contributors/BeLux-Open-Source-Clinic/<REPO>) |
+| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/<YOUR_ORG>/<REPO>) | ![Forks](https://img.shields.io/github/forks/BeLux-Open-Source-Clinic/<REPO>) | ![Closed Issues](https://img.shields.io/github/issues-closed/BeLux-Open-Source-Clinic/<REPO>) |
