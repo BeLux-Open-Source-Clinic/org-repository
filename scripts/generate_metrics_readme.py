@@ -8,27 +8,34 @@ org = data["data"]["organization"]
 repos = org["repositories"]["nodes"]
 members = org["membersWithRole"]["nodes"]
 
+# Determine the most "active" repository (by stars + forks + PRs)
+top_repo = max(
+    repos,
+    key=lambda r: r["stargazers"]["totalCount"] + r["forks"]["totalCount"] + r["pullRequests"]["totalCount"],
+)
+
+top_repo_name = top_repo["name"]
+
 # ✅ Organization-Wide Metrics
 readme_content = "# 🚀 Organization-Wide Metrics\n\n"
 readme_content += "| Repository | ⭐ Stars | 🍴 Forks | ✅ Merged PRs | 🐞 Closed Issues |\n"
 readme_content += "|------------|----------|-----------|-----------------|-----------------|\n"
 
 for repo in repos:
-    name = repo['name']
-    stars = repo['stargazers']['totalCount']
-    forks = repo['forks']['totalCount']
-    merged_prs = repo['pullRequests']['totalCount']
-    closed_issues = repo['issues']['totalCount']
+    name = repo["name"]
+    stars = repo["stargazers"]["totalCount"]
+    forks = repo["forks"]["totalCount"]
+    merged_prs = repo["pullRequests"]["totalCount"]
+    closed_issues = repo["issues"]["totalCount"]
 
-    readme_content += f"| [{name}](https://github.com/<YOUR_ORG_NAME>/{name}) "
+    readme_content += f"| [{name}](https://github.com/BeLux-Open-Source-Clinic/{name}) "
     readme_content += f"| {stars} | {forks} | {merged_prs} | {closed_issues} |\n"
 
-# ✅ Dynamic Contributor Leaderboard
+# ✅ Top Contributors
 readme_content += "\n## 🏆 Contributor Leaderboard (Updated Daily)\n\n"
 readme_content += "| Rank | Contributor | ✅ PRs Merged | 🐞 Issues Closed |\n"
 readme_content += "|------|------------|--------------|----------------|\n"
 
-# Sort members by highest contributions (PRs + Issues Closed)
 sorted_members = sorted(
     members, 
     key=lambda m: (
@@ -38,23 +45,22 @@ sorted_members = sorted(
 )[:10]  # Top 10 contributors
 
 for idx, member in enumerate(sorted_members, 1):
-    login = member['login']
-    cc = member['contributionsCollection']
-    prs = cc['totalPullRequestContributions']
-    closed_issues = cc['totalIssueContributions']
+    login = member["login"]
+    cc = member["contributionsCollection"]
+    prs = cc["totalPullRequestContributions"]
+    closed_issues = cc["totalIssueContributions"]
 
     readme_content += f"| {idx} | [@{login}](https://github.com/{login}) | {prs} | {closed_issues} |\n"
 
-# ✅ Dynamic Metrics Table (Generated from Data)
+# ✅ Dynamic Metrics Table with Automatically Selected Top Repository
 readme_content += "\n## 📊 Organization Metrics\n\n"
 readme_content += "| 🚀 Organization Stats | 🌍 Contributors |\n"
 readme_content += "|----------------------|----------------|\n"
-readme_content += f"| ![Stars](https://img.shields.io/github/stars/<YOUR_ORG>/<REPO>) "
-readme_content += f"| ![Total Contributors](https://img.shields.io/github/contributors/<YOUR_ORG>/<REPO>) |\n"
-readme_content += f"| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/<YOUR_ORG>/<REPO>) "
-readme_content += f"| ![Closed Issues](https://img.shields.io/github/issues-closed/<YOUR_ORG>/<REPO>) |\n"
+readme_content += f"| ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/{top_repo_name}) "
+readme_content += f"| ![Total Contributors](https://img.shields.io/github/contributors/BeLux-Open-Source-Clinic/{top_repo_name}) |\n"
+readme_content += f"| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/BeLux-Open-Source-Clinic/{top_repo_name}) "
+readme_content += f"| ![Closed Issues](https://img.shields.io/github/issues-closed/BeLux-Open-Source-Clinic/{top_repo_name}) |\n"
 
 # ✅ Write to README file
 with open("README.md", "w") as f:
     f.write(readme_content)
-
