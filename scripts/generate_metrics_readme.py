@@ -12,6 +12,6 @@ for repo in repos:
     print(f"| [{repo['name']}](https://github.com/BeLux-Open-Source-Clinic/{repo['name']}) "
           f"| {repo['stargazers']['totalCount']} "
           f"| {repo['forks']['totalCount']} "
-          f"| {repo['watchers']['totalCount']} "
+          f"| {repo['subscribers']['totalCount']} "
           f"| {repo['pullRequests']['totalCount']} "
           f"| {repo['issues']['totalCount']} |")
