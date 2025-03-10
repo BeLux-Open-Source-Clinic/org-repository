@@ -2,26 +2,22 @@
 
 | Repository | ⭐ Stars | 🍴 Forks | ✅ Merged PRs | 🐞 Closed Issues |
 |------------|----------|-----------|-----------------|-----------------|
-{% for repo in repos %}
-| [{{ repo.name }}](https://github.com/BeLux-Open-Source-Clinic/{{ repo.name }}) | {{ repo.stargazers.totalCount }} | {{ repo.forks.totalCount }} | {{ repo.pullRequests.totalCount }} | {{ repo.issues.totalCount }} |
-{% endfor %}
+| [demo-repository](https://github.com/BeLux-Open-Source-Clinic/demo-repository) | 1 | 0 | 1 | 0 |
+| [project-template](https://github.com/BeLux-Open-Source-Clinic/project-template) | 1 | 0 | 0 | 1 |
+| [org-repository](https://github.com/BeLux-Open-Source-Clinic/org-repository) | 0 | 0 | 0 | 1 |
+| [.github](https://github.com/BeLux-Open-Source-Clinic/.github) | 0 | 0 | 0 | 0 |
+| [.github-private](https://github.com/BeLux-Open-Source-Clinic/.github-private) | 0 | 0 | 0 | 0 |
 
----
+## 🏆 Contributor Leaderboard (Updated Daily)
 
-## 🎖️ Contributor Leaderboard (Updated Daily)
+| Rank | Contributor | ✅ PRs Merged | 🐞 Issues Closed |
+|------|------------|--------------|----------------|
+| 1 | [@jamelachahbar](https://github.com/jamelachahbar) | 24 | 2 |
+| 2 | [@claestom](https://github.com/claestom) | 0 | 0 |
 
-| 🏆 Rank | 👤 Contributor | ✅ PRs Merged | 🐞 Issues Closed | 📌 Commits |
-|--------|--------------|--------------|----------------|----------|
-{% for contributor in top_contributors %}
-| {{ loop.index }} | [@{{ contributor.login }}](https://github.com/{{ contributor.login }}) | {{ contributor.pullRequests.totalCount }} | {{ contributor.issues.totalCount }} | {{ contributor.commits.totalCount }} |
-{% endfor %}
+## 📊 Organization Metrics
 
----
-
-## 📊 Organization Stats & Dynamic Badges
-
-| 🌟 Stars | 🍴 Forks | 🚀 PRs Merged | 🐞 Issues Closed |
-|----------------------|----------------|----------------|----------------|
-| ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/{{ top_repo_name }}) | ![Forks](https://img.shields.io/github/forks/BeLux-Open-Source-Clinic/{{ top_repo_name }}) | ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/BeLux-Open-Source-Clinic/{{ top_repo_name }}) | ![Closed Issues](https://img.shields.io/github/issues-closed/BeLux-Open-Source-Clinic/{{ top_repo_name }}) |
-
-🔄 **Updated Daily via GitHub Actions**
+| 🚀 Organization Stats | 🌍 Contributors |
+|----------------------|----------------|
+| ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/demo-repository) | ![Total Contributors](https://img.shields.io/github/contributors/BeLux-Open-Source-Clinic/demo-repository) |
+| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/BeLux-Open-Source-Clinic/demo-repository) | ![Closed Issues](https://img.shields.io/github/issues-closed/BeLux-Open-Source-Clinic/demo-repository) |
