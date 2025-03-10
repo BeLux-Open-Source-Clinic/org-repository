@@ -70,7 +70,7 @@ for idx, member in enumerate(sorted_members, 1):
     readme_content += f"| {idx} | [@{login}](https://github.com/{login}) | {prs} | {closed_issues} |\n"
 
 # ✅ Revamped Organization Metrics Table
-readme_content += "\n## 📊 Organization Insights (Revamped)\n\n"
+readme_content += "\n## 📊 Organization Insights\n\n"
 readme_content += "| 🔹 Metric | 📊 Value |\n"
 readme_content += "|----------------------|------------------|\n"
 readme_content += f"| 🏆 **Top Contributor** | [@{top_contributor_name}](https://github.com/{top_contributor_name}) |\n"
@@ -79,7 +79,7 @@ readme_content += f"| 🔄 **PRs vs Issues Trend** | {prs_vs_issues} |\n"
 readme_content += f"| 💡 **Engagement Score** | {engagement_score} |\n"
 
 # ✅ Improved Badge Display with Dynamic Repo
-readme_content += "\n## 📊 Dynamic Organization Badges\n\n"
+readme_content += "\n## 📊 Dynamic Organization Badges for Top Repo\n\n"
 readme_content += "| 🚀 Stars | 🌍 Contributors | ✅ PRs Closed | 🐞 Issues Closed |\n"
 readme_content += "|----------|----------------|---------------|-----------------|\n"
 readme_content += f"| ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/{top_repo_name}?style=for-the-badge) "
