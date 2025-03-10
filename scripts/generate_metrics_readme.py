@@ -9,12 +9,9 @@ repos = org["repositories"]["nodes"]
 members = org["membersWithRole"]["nodes"]
 
 # Determine the most "active" repository (by stars + forks + PRs)
-top_repo = max(
-    repos,
-    key=lambda r: r["stargazers"]["totalCount"] + r["forks"]["totalCount"] + r["pullRequests"]["totalCount"],
-)
-
+top_repo = next((repo for repo in repos if repo["stargazers"]["totalCount"] > 0), repos[0])
 top_repo_name = top_repo["name"]
+print(f"Selected repository for badges: {top_repo_name}")  # Debugging line
 
 # ✅ Organization-Wide Metrics
 readme_content = "# 🚀 Organization-Wide Metrics\n\n"
