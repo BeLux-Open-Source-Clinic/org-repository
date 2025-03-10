@@ -1,0 +1,17 @@
+name: Contributor Leaderboard
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Runs weekly
+
+jobs:
+  leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: leaderboard.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+          plugin_leaderboard: yes
