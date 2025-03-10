@@ -8,10 +8,10 @@ org = data["data"]["organization"]
 repos = org["repositories"]["nodes"]
 members = org["membersWithRole"]["nodes"]
 
-# ✅ Organization-wide metrics
-print("# 🚀 Organization-Wide Metrics\n")
-print("| Repository | ⭐ Stars | 🍴 Forks | ✅ Merged PRs | 🐞 Closed Issues |")
-print("|------------|----------|-----------|-----------------|-----------------|")
+# ✅ Organization-Wide Metrics
+readme_content = "# 🚀 Organization-Wide Metrics\n\n"
+readme_content += "| Repository | ⭐ Stars | 🍴 Forks | ✅ Merged PRs | 🐞 Closed Issues |\n"
+readme_content += "|------------|----------|-----------|-----------------|-----------------|\n"
 
 for repo in repos:
     name = repo['name']
@@ -20,20 +20,18 @@ for repo in repos:
     merged_prs = repo['pullRequests']['totalCount']
     closed_issues = repo['issues']['totalCount']
 
-    print(f"| [{name}](https://github.com/BeLux-Open-Source-Clinic/{name}) "
-          f"| {stars} | {forks} | {merged_prs} | {closed_issues} |")
+    readme_content += f"| [{name}](https://github.com/<YOUR_ORG_NAME>/{name}) "
+    readme_content += f"| {stars} | {forks} | {merged_prs} | {closed_issues} |\n"
 
-# ✅ Top Contributors
-print("\n# 🥇 Top Contributors\n")
-print("| Rank | Contributor | Commits | PR Reviews | PRs Opened | Issues Created | Issues Closed |")
-print("|------|-------------|---------|------------|------------|-----------------|-----------------|")
+# ✅ Dynamic Contributor Leaderboard
+readme_content += "\n## 🏆 Contributor Leaderboard (Updated Daily)\n\n"
+readme_content += "| Rank | Contributor | ✅ PRs Merged | 🐞 Issues Closed |\n"
+readme_content += "|------|------------|--------------|----------------|\n"
 
-# Sort members by highest contributions (Commits + PR Reviews + PRs + Issues)
+# Sort members by highest contributions (PRs + Issues Closed)
 sorted_members = sorted(
     members, 
     key=lambda m: (
-        m["contributionsCollection"]["totalCommitContributions"] +
-        m["contributionsCollection"]["totalPullRequestReviewContributions"] +
         m["contributionsCollection"]["totalPullRequestContributions"] +
         m["contributionsCollection"]["totalIssueContributions"]
     ), reverse=True
@@ -42,12 +40,21 @@ sorted_members = sorted(
 for idx, member in enumerate(sorted_members, 1):
     login = member['login']
     cc = member['contributionsCollection']
-    commits = cc['totalCommitContributions']
-    reviews = cc['totalPullRequestReviewContributions']
     prs = cc['totalPullRequestContributions']
-    issues = cc['totalIssueContributions']
-    closed_issues = cc['totalIssueContributions']  # Using same field for now
+    closed_issues = cc['totalIssueContributions']
 
-    print(f"| {idx} "
-          f"| [{login}](https://github.com/{login}) "
-          f"| {commits} | {reviews} | {prs} | {issues} | {closed_issues} |")
+    readme_content += f"| {idx} | [@{login}](https://github.com/{login}) | {prs} | {closed_issues} |\n"
+
+# ✅ Dynamic Metrics Table (Generated from Data)
+readme_content += "\n## 📊 Organization Metrics\n\n"
+readme_content += "| 🚀 Organization Stats | 🌍 Contributors |\n"
+readme_content += "|----------------------|----------------|\n"
+readme_content += f"| ![Stars](https://img.shields.io/github/stars/<YOUR_ORG>/<REPO>) "
+readme_content += f"| ![Total Contributors](https://img.shields.io/github/contributors/<YOUR_ORG>/<REPO>) |\n"
+readme_content += f"| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/<YOUR_ORG>/<REPO>) "
+readme_content += f"| ![Closed Issues](https://img.shields.io/github/issues-closed/<YOUR_ORG>/<REPO>) |\n"
+
+# ✅ Write to README file
+with open("README.md", "w") as f:
+    f.write(readme_content)
+
