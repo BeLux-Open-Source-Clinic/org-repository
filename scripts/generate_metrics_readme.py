@@ -9,7 +9,7 @@ print("| Repo | ⭐ Stars | 🍴 Forks | 🔍 Watchers | ✅ Merged PRs | 🐞 C
 print("|------|----------|----------|--------------|----------------|------------------|")
 
 for repo in repos:
-    print(f"| [{repo['name']}](https://github.com/<ORG_NAME>/{repo['name']}) "
+    print(f"| [{repo['name']}](https://github.com/BeLux-Open-Source-Clinic/{repo['name']}) "
           f"| {repo['stargazers']['totalCount']} "
           f"| {repo['forks']['totalCount']} "
           f"| {repo['watchers']['totalCount']} "
