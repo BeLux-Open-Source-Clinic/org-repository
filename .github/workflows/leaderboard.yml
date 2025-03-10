@@ -48,5 +48,9 @@ jobs:
 
       - name: Commit & Push Updates
         run: |
-          git config user.name "github-actions[
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "actions@github.com"
+          git add README.md org_metrics.json
+          git commit -m "Daily metrics update with top repo" || echo "No changes"
+          git push origin main
 
