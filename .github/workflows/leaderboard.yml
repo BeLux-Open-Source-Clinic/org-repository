@@ -1,4 +1,4 @@
-name: Organization Metrics Automation
+name: Organization Metrics & Contributor Leaderboard
 
 on:
   schedule:
@@ -6,22 +6,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-org-metrics:
+  update-metrics:
     runs-on: ubuntu-latest
-
     permissions:
-      contents: write  # Crucial to push updates to repo
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch Metrics via GitHub GraphQL API
+      - name: Fetch Org & Contributor Metrics
         env:
           GH_TOKEN: ${{ secrets.ORG_METRICS_TOKEN }}
         run: |
           gh api graphql -f query='
           {
-            organization(login: "BeLux-Open-Source-Clinic") {
+            organization(login: "<YOUR_ORG_NAME>") {
               repositories(first: 100) {
                 nodes {
                   name
@@ -31,18 +30,23 @@ jobs:
                   issues(states: CLOSED) { totalCount }
                 }
               }
+              membersWithRole(first: 100) {
+                nodes {
+                  login
+                  contributionsCollection {
+                    totalPullRequestContributions
+                    totalIssueContributions
+                  }
+                }
+              }
             }
           }' > org_metrics.json
 
-      - name: Generate README.md from Metrics
+      - name: Generate Dynamic README.md
         run: |
-          python scripts/generate_metrics_readme.py org_metrics.json > README.md
+          python scripts/generate_metrics_readme.py org_metrics.json
 
-      - name: Commit and Push Metrics Updates
+      - name: Commit & Push Updates
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "actions@github.com"
-          git add README.md org_metrics.json
-          git commit -m "Automated daily org metrics update" || echo "No changes to commit"
-          git push origin main
+          git config user.name "github-actions[
 
