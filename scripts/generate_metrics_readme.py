@@ -56,10 +56,10 @@ for idx, member in enumerate(sorted_members, 1):
 readme_content += "\n## 📊 Organization Metrics\n\n"
 readme_content += "| 🚀 Organization Stats | 🌍 Contributors |\n"
 readme_content += "|----------------------|----------------|\n"
-readme_content += f"| ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/{top_repo_name}) "
-readme_content += f"| ![Total Contributors](https://img.shields.io/github/contributors/BeLux-Open-Source-Clinic/{top_repo_name}) |\n"
-readme_content += f"| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/BeLux-Open-Source-Clinic/{top_repo_name}) "
-readme_content += f"| ![Closed Issues](https://img.shields.io/github/issues-closed/BeLux-Open-Source-Clinic/{top_repo_name}) |\n"
+readme_content += f"| ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/{top_repo_name}?style=for-the-badge) "
+readme_content += f"| ![Total Contributors](https://img.shields.io/github/contributors/BeLux-Open-Source-Clinic/{top_repo_name}?style=for-the-badge) |\n"
+readme_content += f"| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/BeLux-Open-Source-Clinic/{top_repo_name}?style=for-the-badge) "
+readme_content += f"| ![Closed Issues](https://img.shields.io/github/issues-closed/BeLux-Open-Source-Clinic/{top_repo_name}?style=for-the-badge) |\n"
 
 # ✅ Write to README file
 with open("README.md", "w") as f:
