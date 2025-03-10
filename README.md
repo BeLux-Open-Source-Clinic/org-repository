@@ -15,7 +15,7 @@
 | 1 | [@jamelachahbar](https://github.com/jamelachahbar) | 24 | 2 |
 | 2 | [@claestom](https://github.com/claestom) | 1 | 0 |
 
-## 📊 Organization Insights (Revamped)
+## 📊 Organization Insights
 
 | 🔹 Metric | 📊 Value |
 |----------------------|------------------|
@@ -24,7 +24,7 @@
 | 🔄 **PRs vs Issues Trend** | 🐞 More Issues Closed |
 | 💡 **Engagement Score** | 5 |
 
-## 📊 Dynamic Organization Badges
+## 📊 Dynamic Organization Badges for Top Repo
 
 | 🚀 Stars | 🌍 Contributors | ✅ PRs Closed | 🐞 Issues Closed |
 |----------|----------------|---------------|-----------------|
