@@ -22,7 +22,7 @@ jobs:
         run: |
           gh api graphql -f query='
           {
-            organization(login: "BeLux-Open-Source-Clinic") {
+            organization(login: "<YOUR_ORG_NAME>") {
               repositories(first: 100) {
                 nodes {
                   name
