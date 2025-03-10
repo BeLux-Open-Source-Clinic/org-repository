@@ -2,16 +2,28 @@ name: Contributor Leaderboard
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Runs weekly
+    - cron: '0 0 * * 1'  # Runs weekly on Monday
+  workflow_dispatch: # Manual trigger option
 
 jobs:
-  leaderboard:
+  generate-leaderboard:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: lowlighter/metrics@latest
+
+      - name: Generate Contributor Leaderboard
+        uses: lowlighter/metrics@latest
         with:
           filename: leaderboard.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           plugin_leaderboard: yes
+          plugin_leaderboard_ignored: "github-actions[bot]"
+
+      - name: Commit and Push Leaderboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add leaderboard.svg
+          git commit -m "Update contributor leaderboard" || echo "No changes"
+          git push origin main
