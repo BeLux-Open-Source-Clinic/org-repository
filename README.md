@@ -19,5 +19,5 @@
 
 | 🚀 Organization Stats | 🌍 Contributors |
 |----------------------|----------------|
-| ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/demo-repository) | ![Total Contributors](https://img.shields.io/github/contributors/BeLux-Open-Source-Clinic/demo-repository) |
-| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/BeLux-Open-Source-Clinic/demo-repository) | ![Closed Issues](https://img.shields.io/github/issues-closed/BeLux-Open-Source-Clinic/demo-repository) |
+| ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/demo-repository?style=for-the-badge) | ![Total Contributors](https://img.shields.io/github/contributors/BeLux-Open-Source-Clinic/demo-repository?style=for-the-badge) |
+| ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/BeLux-Open-Source-Clinic/demo-repository?style=for-the-badge) | ![Closed Issues](https://img.shields.io/github/issues-closed/BeLux-Open-Source-Clinic/demo-repository?style=for-the-badge) |
