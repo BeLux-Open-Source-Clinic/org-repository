@@ -7,6 +7,7 @@
 | [org-repository](https://github.com/BeLux-Open-Source-Clinic/org-repository) | 0 | 0 | 0 | 1 |
 | [.github](https://github.com/BeLux-Open-Source-Clinic/.github) | 0 | 0 | 0 | 0 |
 | [.github-private](https://github.com/BeLux-Open-Source-Clinic/.github-private) | 0 | 0 | 0 | 0 |
+| [AzureOptimizerOpenSource](https://github.com/BeLux-Open-Source-Clinic/AzureOptimizerOpenSource) | 1 | 0 | 0 | 0 |
 
 ## 🏆 Contributor Leaderboard (Updated Daily)
 
@@ -22,7 +23,7 @@
 | 🏆 **Top Contributor** | [@jamelachahbar](https://github.com/jamelachahbar) |
 | 🚀 **Most Active Repo** | [demo-repository](https://github.com/BeLux-Open-Source-Clinic/demo-repository) |
 | 🔄 **PRs vs Issues Trend** | 🐞 More Issues Closed |
-| 💡 **Engagement Score** | 5 |
+| 💡 **Engagement Score** | 6 |
 
 ## 📊 Dynamic Organization Badges for Top Repo
 
