@@ -8,6 +8,8 @@
 | [.github](https://github.com/BeLux-Open-Source-Clinic/.github) | 0 | 0 | 0 | 0 |
 | [.github-private](https://github.com/BeLux-Open-Source-Clinic/.github-private) | 0 | 0 | 0 | 0 |
 | [AzureOptimizerOpenSource](https://github.com/BeLux-Open-Source-Clinic/AzureOptimizerOpenSource) | 1 | 0 | 0 | 0 |
+| [workload-dashboard](https://github.com/BeLux-Open-Source-Clinic/workload-dashboard) | 0 | 0 | 0 | 0 |
+| [legendary-tribble](https://github.com/BeLux-Open-Source-Clinic/legendary-tribble) | 0 | 0 | 0 | 0 |
 
 ## 🏆 Contributor Leaderboard (Updated Daily)
 
