@@ -8,7 +8,7 @@
 | [.github](https://github.com/BeLux-Open-Source-Clinic/.github) | 0 | 0 | 0 | 0 |
 | [.github-private](https://github.com/BeLux-Open-Source-Clinic/.github-private) | 0 | 0 | 0 | 0 |
 | [AzureOptimizerOpenSource](https://github.com/BeLux-Open-Source-Clinic/AzureOptimizerOpenSource) | 1 | 0 | 0 | 0 |
-| [workload-dashboard](https://github.com/BeLux-Open-Source-Clinic/workload-dashboard) | 0 | 0 | 0 | 0 |
+| [workload-dashboard](https://github.com/BeLux-Open-Source-Clinic/workload-dashboard) | 0 | 1 | 1 | 0 |
 | [legendary-tribble](https://github.com/BeLux-Open-Source-Clinic/legendary-tribble) | 0 | 0 | 0 | 0 |
 
 ## 🏆 Contributor Leaderboard (Updated Daily)
@@ -16,7 +16,7 @@
 | Rank | Contributor | ✅ PRs Merged | 🐞 Issues Closed |
 |------|------------|--------------|----------------|
 | 1 | [@jamelachahbar](https://github.com/jamelachahbar) | 24 | 2 |
-| 2 | [@claestom](https://github.com/claestom) | 1 | 0 |
+| 2 | [@claestom](https://github.com/claestom) | 2 | 1 |
 
 ## 📊 Organization Insights
 
@@ -25,7 +25,7 @@
 | 🏆 **Top Contributor** | [@jamelachahbar](https://github.com/jamelachahbar) |
 | 🚀 **Most Active Repo** | [demo-repository](https://github.com/BeLux-Open-Source-Clinic/demo-repository) |
 | 🔄 **PRs vs Issues Trend** | 🐞 More Issues Closed |
-| 💡 **Engagement Score** | 6 |
+| 💡 **Engagement Score** | 7 |
 
 ## 📊 Dynamic Organization Badges for Top Repo
 
