@@ -10,6 +10,7 @@
 | [AzureOptimizerOpenSource](https://github.com/BeLux-Open-Source-Clinic/AzureOptimizerOpenSource) | 1 | 0 | 0 | 0 |
 | [workload-dashboard](https://github.com/BeLux-Open-Source-Clinic/workload-dashboard) | 0 | 1 | 1 | 0 |
 | [legendary-tribble](https://github.com/BeLux-Open-Source-Clinic/legendary-tribble) | 0 | 0 | 0 | 0 |
+| [vminsights-automation](https://github.com/BeLux-Open-Source-Clinic/vminsights-automation) | 0 | 0 | 0 | 0 |
 
 ## 🏆 Contributor Leaderboard (Updated Daily)
 
