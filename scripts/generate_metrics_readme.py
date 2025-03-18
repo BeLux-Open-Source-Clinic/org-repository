@@ -76,8 +76,9 @@ sorted_members = sorted(
 for idx, member in enumerate(sorted_members, 1):
     login = member["login"]
     cc = member["contributionsCollection"]
-    prs = cc["totalPullRequestContributions"]
-    closed_issues = cc["totalIssueContributions"]
+    prs = cc.get("totalPullRequestContributions", 0)  # Default to 0 if missing
+    closed_issues = cc.get("totalIssueContributions", 0)  # Default to 0 if missing
+
 
     readme_content += f"| {idx} | [@{login}](https://github.com/{login}) | {prs} | {closed_issues} |\n"
 
