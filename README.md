@@ -10,7 +10,7 @@
 | [workload-dashboard](https://github.com/BeLux-Open-Source-Clinic/workload-dashboard) | 0 | 1 | 1 | 0 |
 | [legendary-tribble](https://github.com/BeLux-Open-Source-Clinic/legendary-tribble) | 0 | 0 | 0 | 0 |
 | [vminsights-automation](https://github.com/BeLux-Open-Source-Clinic/vminsights-automation) | 0 | 0 | 0 | 0 |
-| [AzureOptimizer](https://github.com/BeLux-Open-Source-Clinic/AzureOptimizer) | 1 | 0 | 3 | 0 |
+| [AzureOptimizer](https://github.com/BeLux-Open-Source-Clinic/AzureOptimizer) | 1 | 0 | 4 | 0 |
 | [test-repoghcli-001](https://github.com/BeLux-Open-Source-Clinic/test-repoghcli-001) | 0 | 0 | 1 | 0 |
 | [test-repoghcli-002](https://github.com/BeLux-Open-Source-Clinic/test-repoghcli-002) | 0 | 0 | 1 | 0 |
 | [optimonkey](https://github.com/BeLux-Open-Source-Clinic/optimonkey) | 0 | 0 | 1 | 0 |
@@ -21,7 +21,7 @@
 | Rank | Contributor | ✅ PRs Merged | 🐞 Issues Closed |
 |------|------------|--------------|----------------|
 | 1 | [@claestom](https://github.com/claestom) | 8 | 1 |
-| 2 | [@jamelachahbar](https://github.com/jamelachahbar) | 1 | 4 |
+| 2 | [@jamelachahbar](https://github.com/jamelachahbar) | 2 | 4 |
 
 ## 📊 Organization Insights
 
@@ -30,7 +30,7 @@
 | 🏆 **Top Contributor** | [@claestom](https://github.com/claestom) |
 | 🚀 **Most Active Repo** | [demo-repository](https://github.com/BeLux-Open-Source-Clinic/demo-repository) |
 | 🔄 **PRs vs Issues Trend** | 📈 PRs Leading |
-| 💡 **Engagement Score** | 15 |
+| 💡 **Engagement Score** | 16 |
 
 ## 📊 Dynamic Organization Badges for Top Repo
 
