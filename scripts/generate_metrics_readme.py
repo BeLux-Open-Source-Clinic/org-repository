@@ -76,8 +76,18 @@ sorted_members = sorted(
 for idx, member in enumerate(sorted_members, 1):
     login = member["login"]
     cc = member["contributionsCollection"]
-    prs = cc.get("totalPullRequestContributions", 0)  # Default to 0 if missing
-    closed_issues = cc.get("totalIssueContributions", 0)  # Default to 0 if missing
+    # Ensure PRs and Issues are counted only for organization repositories
+    prs = sum(
+        contrib["contributions"]["totalCount"]
+        for contrib in cc.get("pullRequestContributionsByRepository", [])
+        if contrib["repository"]["name"] in org_repo_names
+    )
+    
+    closed_issues = sum(
+        contrib["contributions"]["totalCount"]
+        for contrib in cc.get("issueContributionsByRepository", [])
+        if contrib["repository"]["name"] in org_repo_names
+    )
 
 
     readme_content += f"| {idx} | [@{login}](https://github.com/{login}) | {prs} | {closed_issues} |\n"
