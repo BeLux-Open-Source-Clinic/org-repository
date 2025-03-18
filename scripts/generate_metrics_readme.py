@@ -76,18 +76,19 @@ sorted_members = sorted(
 for idx, member in enumerate(sorted_members, 1):
     login = member["login"]
     cc = member["contributionsCollection"]
-    # Ensure PRs and Issues are counted only for organization repositories
+    # ✅ Filter PR and issue contributions to include only organization repositories
     prs = sum(
         contrib["contributions"]["totalCount"]
         for contrib in cc.get("pullRequestContributionsByRepository", [])
-        if contrib["repository"]["name"] in org_repo_names
+        if contrib["repository"]["name"] in org_repo_names and contrib["repository"]["owner"]["login"] == "BeLux-Open-Source-Clinic"
     )
     
     closed_issues = sum(
         contrib["contributions"]["totalCount"]
         for contrib in cc.get("issueContributionsByRepository", [])
-        if contrib["repository"]["name"] in org_repo_names
+        if contrib["repository"]["name"] in org_repo_names and contrib["repository"]["owner"]["login"] == "BeLux-Open-Source-Clinic"
     )
+
 
 
     readme_content += f"| {idx} | [@{login}](https://github.com/{login}) | {prs} | {closed_issues} |\n"
