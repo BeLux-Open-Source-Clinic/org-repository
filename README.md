@@ -10,7 +10,7 @@
 | [workload-dashboard](https://github.com/BeLux-Open-Source-Clinic/workload-dashboard) | 0 | 1 | 1 | 0 |
 | [legendary-tribble](https://github.com/BeLux-Open-Source-Clinic/legendary-tribble) | 0 | 0 | 0 | 0 |
 | [vminsights-automation](https://github.com/BeLux-Open-Source-Clinic/vminsights-automation) | 0 | 0 | 0 | 0 |
-| [AzureOptimizer](https://github.com/BeLux-Open-Source-Clinic/AzureOptimizer) | 0 | 0 | 3 | 0 |
+| [AzureOptimizer](https://github.com/BeLux-Open-Source-Clinic/AzureOptimizer) | 1 | 0 | 3 | 0 |
 | [test-repoghcli-001](https://github.com/BeLux-Open-Source-Clinic/test-repoghcli-001) | 0 | 0 | 1 | 0 |
 | [test-repoghcli-002](https://github.com/BeLux-Open-Source-Clinic/test-repoghcli-002) | 0 | 0 | 1 | 0 |
 
@@ -28,7 +28,7 @@
 | 🏆 **Top Contributor** | [@claestom](https://github.com/claestom) |
 | 🚀 **Most Active Repo** | [demo-repository](https://github.com/BeLux-Open-Source-Clinic/demo-repository) |
 | 🔄 **PRs vs Issues Trend** | 📈 PRs Leading |
-| 💡 **Engagement Score** | 11 |
+| 💡 **Engagement Score** | 12 |
 
 ## 📊 Dynamic Organization Badges for Top Repo
 
