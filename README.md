@@ -32,6 +32,6 @@
 
 ## 📊 Dynamic Organization Badges for Top Repo
 
-| 🚀 Stars | 🌍 Contributors | ✅ PRs Closed | 🐞 Issues Created |
+| 🚀 Stars | 🌍 Contributors | ✅ PRs Closed | 🐞 Issues Closed |
 |----------|----------------|---------------|-----------------|
 | ![Stars](https://img.shields.io/github/stars/BeLux-Open-Source-Clinic/demo-repository?style=for-the-badge) | ![Contributors](https://img.shields.io/github/contributors/BeLux-Open-Source-Clinic/demo-repository?style=for-the-badge) | ![PRs Closed](https://img.shields.io/github/issues-pr-closed-raw/BeLux-Open-Source-Clinic/demo-repository?style=for-the-badge) | ![Issues Closed](https://img.shields.io/github/issues-closed/BeLux-Open-Source-Clinic/demo-repository?style=for-the-badge) |
