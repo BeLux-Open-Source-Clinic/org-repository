@@ -24,7 +24,7 @@
 
 | 🔹 Metric | 📊 Value |
 |----------------------|------------------|
-| 🏆 **Top Contributor** | [@jamelachahbar](https://github.com/jamelachahbar) |
+| 🏆 **Top Contributor** | [@claestom](https://github.com/claestom) |
 | 🚀 **Most Active Repo** | [demo-repository](https://github.com/BeLux-Open-Source-Clinic/demo-repository) |
 | 🔄 **PRs vs Issues Trend** | 📈 PRs Leading |
 | 💡 **Engagement Score** | 8 |
