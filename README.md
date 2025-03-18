@@ -14,12 +14,13 @@
 | [test-repoghcli-001](https://github.com/BeLux-Open-Source-Clinic/test-repoghcli-001) | 0 | 0 | 1 | 0 |
 | [test-repoghcli-002](https://github.com/BeLux-Open-Source-Clinic/test-repoghcli-002) | 0 | 0 | 1 | 0 |
 | [optimonkey](https://github.com/BeLux-Open-Source-Clinic/optimonkey) | 0 | 0 | 1 | 0 |
+| [test-repoghcli-003](https://github.com/BeLux-Open-Source-Clinic/test-repoghcli-003) | 0 | 0 | 1 | 0 |
 
 ## 🏆 Contributor Leaderboard (Updated Daily)
 
 | Rank | Contributor | ✅ PRs Merged | 🐞 Issues Closed |
 |------|------------|--------------|----------------|
-| 1 | [@claestom](https://github.com/claestom) | 7 | 1 |
+| 1 | [@claestom](https://github.com/claestom) | 8 | 1 |
 | 2 | [@jamelachahbar](https://github.com/jamelachahbar) | 1 | 4 |
 
 ## 📊 Organization Insights
@@ -29,7 +30,7 @@
 | 🏆 **Top Contributor** | [@claestom](https://github.com/claestom) |
 | 🚀 **Most Active Repo** | [demo-repository](https://github.com/BeLux-Open-Source-Clinic/demo-repository) |
 | 🔄 **PRs vs Issues Trend** | 📈 PRs Leading |
-| 💡 **Engagement Score** | 14 |
+| 💡 **Engagement Score** | 15 |
 
 ## 📊 Dynamic Organization Badges for Top Repo
 
