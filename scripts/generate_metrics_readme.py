@@ -62,13 +62,16 @@ readme_content += "\n## 🏆 Contributor Leaderboard (Updated Daily)\n\n"
 readme_content += "| Rank | Contributor | ✅ PRs Merged | 🐞 Issues Closed |\n"
 readme_content += "|------|------------|--------------|----------------|\n"
 
+# Sort members by total PR contributions and issue contributions (only within the org)
 sorted_members = sorted(
-    members, 
+    members,
     key=lambda m: (
-        m["contributionsCollection"]["totalPullRequestContributions"] +
-        m["contributionsCollection"]["totalIssueContributions"]
-    ), reverse=True
-)[:10]  # Top 10 contributors
+        m.get("contributionsCollection", {}).get("totalPullRequestContributions", 0) +
+        m.get("contributionsCollection", {}).get("totalIssueContributions", 0)
+    ),
+    reverse=True
+)[:10]  # Get top 10 contributors
+
 
 for idx, member in enumerate(sorted_members, 1):
     login = member["login"]
