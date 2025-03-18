@@ -19,19 +19,20 @@ total_issues_closed = sum(repo["issues"]["totalCount"] for repo in repos)
 # Ensure contributions are scoped to the organization repositories
 org_repo_names = {repo["name"] for repo in repos}  # Set for fast lookup
 
-# ✅ Find the Top Contributor (Most PRs Merged)
+# Find the top contributor based on contributions within the organization
 top_contributor = max(
     members,
     key=lambda m: sum(
         contrib["pullRequestContributions"]["totalCount"]
         + contrib["issueContributions"]["totalCount"]
-        for contrib in m["contributionsCollection"]["repositoryContributions"]
+        for contrib in m.get("contributionsCollection", {}).get("repositoryContributions", [])
         if contrib["repository"]["name"] in org_repo_names
     ),
     default=None
 )
 
 top_contributor_name = top_contributor["login"] if top_contributor else "No Contributor"
+
 # ✅ Calculate Engagement Score (Total PRs, Issues, Stars, Contributions)
 engagement_score = sum(
     repo["stargazers"]["totalCount"] + repo["pullRequests"]["totalCount"] + repo["issues"]["totalCount"]
