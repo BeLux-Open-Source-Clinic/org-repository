@@ -33,14 +33,30 @@ jobs:
               membersWithRole(first: 100) {
                 nodes {
                   login
-                  contributionsCollection {
-                    totalPullRequestContributions
-                    totalIssueContributions
+                  contributionsCollection(organizationID: "BeLux-Open-Source-Clinic") {
+                    pullRequestContributionsByRepository(maxRepositories: 100) {
+                      repository {
+                        name
+                      }
+                      contributions { totalCount }
+                    }
+                    issueContributionsByRepository(maxRepositories: 100) {
+                      repository {
+                        name
+                      }
+                      contributions { totalCount }
+                    }
                   }
                 }
               }
             }
-          }' > org_metrics.json
+          }' > org_metrics.json || { echo "GraphQL query failed"; exit 1; }
+          
+          # Fail the job if the file is empty
+          if ! [ -s org_metrics.json ]; then
+            echo "org_metrics.json is empty. Exiting..."
+            exit 1
+          fi
 
       - name: Generate Dynamic README.md
         run: |
