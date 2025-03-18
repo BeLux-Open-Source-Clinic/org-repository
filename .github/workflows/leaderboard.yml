@@ -35,11 +35,11 @@ jobs:
                   login
                   contributionsCollection {
                     pullRequestContributionsByRepository(maxRepositories: 100) {
-                      repository { name }
+                      repository { name owner { login } } # ✅ Get repository owner
                       contributions { totalCount }
                     }
                     issueContributionsByRepository(maxRepositories: 100) {
-                      repository { name }
+                      repository { name owner { login } } # ✅ Get repository owner
                       contributions { totalCount }
                     }
                   }
@@ -48,11 +48,12 @@ jobs:
             }
           }' > org_metrics.json || { echo "GraphQL query failed"; exit 1; }
 
-          # Fail the job if the file is empty
+          # Fail if the file is empty
           if ! [ -s org_metrics.json ]; then
             echo "org_metrics.json is empty. Exiting..."
             exit 1
           fi
+
 
 
       - name: Generate Dynamic README.md
