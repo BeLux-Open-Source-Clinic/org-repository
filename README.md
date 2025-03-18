@@ -18,7 +18,7 @@
 | Rank | Contributor | ✅ PRs Merged | 🐞 Issues Closed |
 |------|------------|--------------|----------------|
 | 1 | [@claestom](https://github.com/claestom) | 4 | 1 |
-| 2 | [@jamelachahbar](https://github.com/jamelachahbar) | 72 | 16 |
+| 2 | [@jamelachahbar](https://github.com/jamelachahbar) | 0 | 1 |
 
 ## 📊 Organization Insights
 
