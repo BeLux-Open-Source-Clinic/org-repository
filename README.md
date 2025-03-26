@@ -15,6 +15,7 @@
 | [test-repoghcli-002](https://github.com/BeLux-Open-Source-Clinic/test-repoghcli-002) | 0 | 0 | 1 | 0 |
 | [optimonkey](https://github.com/BeLux-Open-Source-Clinic/optimonkey) | 0 | 0 | 1 | 0 |
 | [test-repoghcli-003](https://github.com/BeLux-Open-Source-Clinic/test-repoghcli-003) | 0 | 0 | 1 | 0 |
+| [ai-foundry-demos-infra](https://github.com/BeLux-Open-Source-Clinic/ai-foundry-demos-infra) | 0 | 0 | 0 | 0 |
 
 ## 🏆 Contributor Leaderboard (Updated Daily)
 
